@@ -36,9 +36,7 @@ function Card(){
         <Box textAlign="left">Demand for workers with specialist data skills has more than tripled over the last five years.</Box>
         <ArrowForwardIcon ml="160px" color="blue" mt="60px"/>
         </Box>
-          
         </Flex>
-      
         </>
     )
 }
