@@ -12,7 +12,7 @@ function Card(){
       } />
         <Box fontWeight="500" mt="4" textAlign="left">Digital Marketing</Box>
         <Box textAlign="left">Get certified free of charge in our Fundamentals of digital marketing course, or explore other content to help get your business online.</Box>
-        <ArrowForwardIcon ml="160px" color="blue" mt="40px"/>
+        <ArrowForwardIcon ml="170px" color="blue" mt="40px" fontSize="22px"/>
         </Box>
 
         <Box boxShadow='xl' p='6' rounded='md' bg='white'h="300px" w="33%">
@@ -23,7 +23,7 @@ function Card(){
       }/>
         <Box fontWeight="500" mt="4" textAlign="left">Career development</Box>
         <Box textAlign="left">Gain the skills you need to enhance your career or gain a new job.</Box>
-        <ArrowForwardIcon ml="160px" color="blue" mt="60px"/>
+        <ArrowForwardIcon ml="170px" color="blue" mt="60px" fontSize="22px"/>
         </Box>
 
         <Box boxShadow='xl' p='6' rounded='md' bg='white'h="300px" w="33%">
@@ -34,7 +34,7 @@ function Card(){
       }/>
         <Box fontWeight="500" mt="4" textAlign="left">Data</Box>
         <Box textAlign="left">Demand for workers with specialist data skills has more than tripled over the last five years.</Box>
-        <ArrowForwardIcon ml="160px" color="blue" mt="60px"/>
+        <ArrowForwardIcon ml="170px" color="blue" mt="60px" fontSize="22px"/>
         </Box>
           
         </Flex>

@@ -1,3 +1,4 @@
+import { ArrowForwardIcon } from '@chakra-ui/icons';
 import { Flex, Spacer,Box, Image, Link } from '@chakra-ui/react'
 
 function Webinar(){
@@ -12,7 +13,7 @@ function Webinar(){
       }
     />
         </Box>
-        <Box color="white" w="45%" m="auto">
+        <Box color="white" w="42%" ml="50px">
                 <Box fontSize="4xl" fontWeight="500">Did you know we also have webinars?</Box>
                 <Box>Online sessions designed to help you develop skills in less than an hour. You can watch
                     webinars live or register to take part in what is coming up.
@@ -21,7 +22,7 @@ function Webinar(){
         </Box>
         <Spacer />
         <Link mr="80px" color="white" fontSize="2xl">
-        Explore our webinars →
+        Explore our webinars <ArrowForwardIcon color="white"/>
         </Link>
     </Flex>
     <Box w="43%" ml="25%" mt="40px">
