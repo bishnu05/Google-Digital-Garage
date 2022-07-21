@@ -23,8 +23,9 @@ export default function Navbar(){
         <Spacer />
         <ButtonGroup gap='2'>
             <Box color='#3c88eb'pr="2rem" fontSize='md'fontWeight="600">Sign In</Box>
-            <Button mr="2rem" fontSize='md'fontWeight="500" p="12px" mt="-12px" bgColor="blue" color="white" h="95%">Register</Button>
+            <Button mr="2rem" fontSize='md'fontWeight="500" p="12px" mt="-12px" bgColor="#3182CE" color="white" h="95%">Register</Button>
         </ButtonGroup>
+        
     </Flex>
     )
 }
