@@ -10,15 +10,13 @@ function Webinar(){
       width="35px"  
       src={
         "https://lh3.googleusercontent.com/N9jW0_MdICcLbzV1L-JcfAXr5QaadNKtc8HgH-KPixv3J9XaSnjLkru3dZl0dfNYR12hEsDkQM_WMXtXqe_ohTSx96E7gmFHwzpXPubIJlfV3ybeTxks=-rw"
-      }
-    />
+      }/>
         </Box>
         <Box color="white" w="42%" ml="50px">
                 <Box fontSize="4xl" fontWeight="500">Did you know we also have webinars?</Box>
                 <Box>Online sessions designed to help you develop skills in less than an hour. You can watch
                     webinars live or register to take part in what is coming up.
                     </Box>
-            
         </Box>
         <Spacer />
         <Link mr="80px" color="white" fontSize="2xl">
@@ -34,7 +32,6 @@ function Webinar(){
        to upgrade your skills for a new digital world.
         </Box>
     </Box>
-
     </>
     )
 }
