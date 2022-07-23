@@ -1,6 +1,5 @@
 import { Box, Container, Flex,Image } from "@chakra-ui/react";
 
-
 function Company(){
     return (
         <Container ml="100px"  mt="60px" w="full">

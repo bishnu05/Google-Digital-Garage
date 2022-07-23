@@ -1,5 +1,5 @@
 import { ArrowForwardIcon, HamburgerIcon, RepeatClockIcon } from "@chakra-ui/icons"
-import { Flex, Grid, Img,Box,Text } from "@chakra-ui/react"
+import { Flex, Grid, Img,Box,Text, Link } from "@chakra-ui/react"
 import { useEffect, useState } from "react"
 import axios from 'axios';
 import Pagination from "./Pagination";
@@ -28,25 +28,22 @@ export default function Products(){
 
   return (
     <Box boxShadow='md' p='6' rounded='md' bg='white' mt="30px" mb="60px">
-        <Flex border="1px solid " w="15%" textAlign="right" h="auto" ml="90px" mt="20px">
-
-            ggggggggggggggggggggggg
-            ggggggggggggggggggggggg
-            
+        <Flex  w="15%" textAlign="right" h="auto" ml="90px" mt="20px">
+           
         </Flex>
         <Grid templateColumns="repeat(3,1fr)" gap="4" w="65%"  ml="25%" textAlign="left"mt="-70px">
             {data.map((item)=>(
                 <Box value={item.id} name={item.id} key={item.id} boxShadow='2xl' p='6' rounded='md' bg='white'>
-                    <Img w="100%" h="170px" src={item.img}/>
-                    <Flex gap="2">
+                    <Img w="100%" h="160px" src={item.img}/>
+                    <Flex gap="2" fontSize="xl" fontWeight="500">
                         <Text>{item.title}</Text>
                     </Flex>
                     <Text>{item.creater}</Text>
                     <Flex gap="8">
                        <Text><HamburgerIcon color="yellow"/>{item.module}</Text>
-                       <Text><RepeatClockIcon/>{item.time}</Text> 
+                       <Text><RepeatClockIcon color="yellow"/>{item.time}</Text> 
                     </Flex>
-                    <ArrowForwardIcon ml="230px" color="blue" mt="35px" fontSize="22px"/>
+                <ArrowForwardIcon ml="230px" color="blue" mt="35px" fontSize="22px"/>
                 </Box>
             ))}
             
