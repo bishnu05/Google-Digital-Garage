@@ -5,13 +5,27 @@ import {
     Button,
     Image
   } from "@chakra-ui/react";
+import axios from "axios";
+import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
   import hello from "./hello.svg.png"
   function Certificate() {
+const [data,setData]=useState({})
+const params=useParams()
+useEffect(() => {
+  //console.log(params.course_id,"bishnu")
+  axios.get(`https://floating-crag-24295.herokuapp.com/courses/${params.course_id}`)
+    .then((res) => {
+      setData(res.data);
+      console.log(res.data)
+    });
+}, []);
+
       return (
         <>
           <Container  w="80%" mt="6rem"  mb="50px"  ml="6%" mr="-20%" >
             <Box  fontSize="4xl"    mr="-20%" ml="-9%">
-            Fundamentals of digital marketing
+            {data.title}
             </Box>
             <Flex>
               <Box fontSize="md"  mr="-20%" ml="-1%">
@@ -49,8 +63,8 @@ import {
           <Button bgColor="#3182CE" color="white" mt="20px" mb="20px" ml="-76%">
               Start Course
             </Button>
-           <Container  mr="200px" mt="-220px" h="350px" >
-              <img src="https://lh3.googleusercontent.com/JwZ74w1xLAO0n24knlxgL9HZJo3NTN3V44YrtyXZvivX4sHYmiyBs89KIxTOIYTR4IDgFq-VFx6L3gutEpDkpicLzl96KKSYbVh3f08" color="white" alt="Digital marketing" />
+           <Container  mr="200px" mt="-250px" h="290px"  >
+              <img w="100%"  src={data.img} color="white" alt="Digital marketing" />
            </Container>
            <Image src={hello} />
         </>

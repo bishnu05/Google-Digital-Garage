@@ -1,12 +1,14 @@
 import { ArrowForwardIcon, HamburgerIcon, RepeatClockIcon } from "@chakra-ui/icons"
-import { Flex, Grid, Img,Box,Text, Link } from "@chakra-ui/react"
+import { Flex, Grid, Img,Box,Text } from "@chakra-ui/react"
 import { useEffect, useState } from "react"
 import axios from 'axios';
 import Pagination from "./Pagination";
+import { Link, useSearchParams } from "react-router-dom";
 
 export default function Products(){
+    const [searchParams, setSearchParams] = useSearchParams();
     const [data,setData] = useState([])
-    const [page,setPage] = useState(1)
+    const [page, setPage] = useState(Number(searchParams.get("page")) || 1);
     const [filter,setFilter] = useState("")
     const handlePageNext=()=>{
         setPage(page+1)
@@ -19,6 +21,9 @@ export default function Products(){
   }
 
   useEffect(()=>{
+    setSearchParams({
+       page
+    })
     axios.get(`https://floating-crag-24295.herokuapp.com/courses?_page=${page}&_limit=12`)
         .then((res)=>{
             console.log(res.data)
@@ -43,7 +48,8 @@ export default function Products(){
                        <Text><HamburgerIcon color="yellow"/>{item.module}</Text>
                        <Text><RepeatClockIcon color="yellow"/>{item.time}</Text> 
                     </Flex>
-                <ArrowForwardIcon ml="230px" color="blue" mt="35px" fontSize="22px"/>
+                    {/* <Text>{item.id}</Text> */}
+                <Link to={`/coursepage/${item.id}`}><ArrowForwardIcon ml="230px" color="blue" mt="35px" fontSize="22px"/></Link>
                 </Box>
             ))}
             
